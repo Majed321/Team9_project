@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Notes.NoteEntryPage"
+             Title="Welcome to AlAmal clinic">
+    <StackLayout Margin="20">
+        <Image Source="https://mhtwyat.com/wp-content/uploads/2020/03/%D8%B4%D8%B9%D8%A7%D8%B1-%D9%88%D8%B2%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D8%B5%D8%AD%D8%A9-%D8%A7%D9%84%D8%B3%D9%8F%D8%B9%D9%88%D8%AF%D9%8A%D8%A9.png"
+               HeightRequest="200" />
+        <Label Text="UserName" FontSize="16" Padding="30,0,30,0"/>
+        <Entry Placeholder="Enter Username" />
+        <Label Text="Password" FontSize="16" Padding="30,0,30,0"/>
+        <Entry Placeholder="Enter Password" />
+        <Label FontSize="16" Padding="30,24,30,0">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+
+
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Editor Placeholder="Write your problem .. "
+                Text="{Binding Text}"
+                HeightRequest="100" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Text="Add the appointment"
+                    Clicked="OnSaveButtonClicked" />
+            <Button Grid.Column="1"
+                    Text="Delete appointment"
+                    Clicked="OnDeleteButtonClicked"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>
